@@ -107,9 +107,16 @@ class VkAccess {
     }
     
     public function getVK() {
-        self::isTokenAvalible();
         return $this->vk;
     }
+
+	public function getAccessToken() {
+		return $this->access_token;
+	}
+
+	public function getUserID() {
+		return $this->user_id;
+	}
     
     public function invoke($func, $par=null) {
         self::isTokenAvalible();

@@ -155,6 +155,14 @@ public class VkAccess {
 		return this.vk;
 	}
 
+	public String getAccessToken() {
+		return this.access_token;
+	}
+
+	public int getUserID() {
+		return this.user_id;
+	}
+	
 	public String invoke(String func) throws Exception {
 		return invoke(func, null);
 	}
