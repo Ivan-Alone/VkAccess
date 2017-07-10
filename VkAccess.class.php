@@ -50,7 +50,7 @@ class VkAccess {
         @unlink('temp.lcf');
         
         curl_setopt($curl, CURLOPT_URL, 'https://oauth.vk.com/authorize?client_id=' . $app_obj->getID() . '&scope=' . $app_obj->getPermissions() . '&redirect_uri=https://oauth.vk.com/blank.html&display=mobile&v=5.67&response_type=token&revoke=1');
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array("User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0 IOEngine/0.0.1 MeHere/0.0.1 VkAuthLib/0.0.1 VkAccess/0.0.1", "Accept-Language: ru-ru,ru;q=0.5"));
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array("User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0 VkAuthLib/0.0.1 VkAccess/0.0.1", "Accept-Language: ru-ru,ru;q=0.5"));
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HEADER, false);
