@@ -183,10 +183,10 @@ public class Me {
         VkAccess vk = new VkAccess(app, LOGIN, PASSWORD);      
         
         try {
-            System.out.print_ln(vk.invoke("photos.getAll"));
-            System.out.print_ln(vk.invoke("messages.getHistory", "user_id=123654&count=137"));        
-            System.out.print_ln(vk.invoke("wall.get", "owner_id=123654&count=137&offset=666"));        
-            System.out.print_ln(vk.invoke("friends.get", "count=137&order=random&count=282"));
+            System.out.println(vk.invoke("photos.getAll"));
+            System.out.println(vk.invoke("messages.getHistory", "user_id=123654&count=137"));        
+            System.out.println(vk.invoke("wall.get", "owner_id=123654&count=137&offset=666"));        
+            System.out.println(vk.invoke("friends.get", "count=137&order=random&count=282"));
         } catch (Exception e) {			
           e.printStackTrace();		
         }    
@@ -197,7 +197,7 @@ public class Me {
 ### Итог
 Надеюсь, вам понравится такой полезный функционал, как простой доступ к токену ВКонтакте, без страшных окон, перехватов и прочих ненужных вещей. 
 
-Пользоваться библиотекой очень просто, и она не перегружена ненужным функционалом - всё остальное каждый разработчик может написать самомтоятельно, благо API ВКонтакте очень хорошо документирован (https://vk.com/dev/).
+Пользоваться библиотекой очень просто, и она не перегружена ненужным функционалом - всё остальное каждый разработчик может написать самоcтоятельно, благо API ВКонтакте очень хорошо документирован (https://vk.com/dev/).
 
 Следует учесть, что библиотека входит во ВКонтакте, представляясь браузером Mozila Firefox на операционной системе Windows 10 x64. Авторизованному пользователю придёт соответствующее электронное письмо, информирующее его о входе, а также push-уведомление на смартфон (при наличии).
 
