@@ -181,12 +181,15 @@ public class Me {
     public static void main(String[] args) {
         VkApp app = new VkApp(123456, new String[]{"photos", "friends", "wall", "messages", "offline"});  
         VkAccess vk = new VkAccess(app, LOGIN, PASSWORD);      
-                
-        System.out.print_ln(vk.invoke("photos.getAll"));
-        System.out.print_ln(vk.invoke("messages.getHistory", "user_id=123654&count=137"));        
-        System.out.print_ln(vk.invoke("wall.get", "owner_id=123654&count=137&offset=666"));        
-        System.out.print_ln(vk.invoke("friends.get", "count=137&order=random&count=282"));
         
+        try {
+            System.out.print_ln(vk.invoke("photos.getAll"));
+            System.out.print_ln(vk.invoke("messages.getHistory", "user_id=123654&count=137"));        
+            System.out.print_ln(vk.invoke("wall.get", "owner_id=123654&count=137&offset=666"));        
+            System.out.print_ln(vk.invoke("friends.get", "count=137&order=random&count=282"));
+        } catch (Exception e) {			
+          e.printStackTrace();		
+        }    
     }
 }
 ```
