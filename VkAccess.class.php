@@ -6,6 +6,7 @@ class VkApp {
     public function __construct($app_id, $permissions) {
         if ($app_id == null || $permissions == null) throw new Exception('NullAppException');
         $this->app_id = $app_id;
+	$perm = '';
         if (is_array($permissions)) {
             foreach($permissions as $par) {
                 $perm .= $par . ',';
