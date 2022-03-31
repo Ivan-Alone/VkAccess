@@ -8,6 +8,11 @@
 
 ### Описание функционала
 
+#### Обновление от 31.03.2022
+Класс PHP был обновлён. Авторизация снова работает штатно. Теперь для использования требуется зависимость, [Network.class.php](https://github.com/Ivan-Alone/PHP-Commons/tree/main/scripts/Network.class.php) (обёртка над PHP cURL) из моего репозитория **PHP-Commons** (так сказать, упрощённого менеджера моих классов).
+
+Класс Java более не поддерживается (может, когда-нибудь обновлю, но сейчас мне это не надо).
+
 #### Содержание
 
 ##### Список классов:
@@ -30,11 +35,15 @@
 
 PHP:
 
-```$vk = new VkAccess($app, $login, $password);```
+```php
+$vk = new VkAccess($app, $login, $password);
+```
 
 Java:
 
-```VkAccess vk = new VkAccess(app, login, password);```
+```java
+VkAccess vk = new VkAccess(app, login, password);
+```
 
 Значения переменных:
 
