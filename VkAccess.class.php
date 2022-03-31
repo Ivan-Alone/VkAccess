@@ -184,7 +184,7 @@ class VkAccess {
 		$this->checkNetwork();
         $this->isTokenAvalible();
 
-        $result = $this->net->GetQuery('https://api.vk.com/method/' . $func . '?access_token=' . $this->access_token . '&v='.static::VK_API_VERSION.'&' . $par, [], true);
+        $result = $this->net->GetQuery('https://api.vk.com/method/' . $func . '?access_token=' . $this->access_token . '&v='.static::VK_API_VERSION.'&' . (is_array($par) ? http_build_query($par) : $par), [], true);
 
 		return $decode_json ? json_decode($result) : $result;
     }
